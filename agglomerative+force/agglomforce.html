@@ -1,0 +1,53 @@
+<!------------------------
+
+Authors: Matthew Reilly
+16/04/19
+What it does:
+main html that is ran for the combination of both agglomerative and force
+all javascript, css and data file are link to here.
+
+----------------------->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Combination Clustering</title>
+	<link rel="stylesheet" type="text/css" href="force.css"/>
+	<script type="text/javascript" src="d3/d3.v4.js"></script>
+	<script src="agglomforce.js"></script>
+</head>
+
+<body>
+
+
+		<div id="forceDiv"></div>
+
+
+
+
+<script type="text/javascript">
+"use strict"
+
+
+var f1;
+
+
+d3.queue()
+	.await(initialiseApp);
+
+//======================== MAIN FUNCTION =================================
+//Carries out all initialization and setup
+function initialiseApp(error){
+	//Check data files have loaded
+
+	if (error) {console . log (" there are error with loading the data: ", error); return;}
+
+		f1 = force("#forceDiv")
+
+		f1.loadAndRenderDataset()
+
+	}
+
+</script>
+</body>
+</html>

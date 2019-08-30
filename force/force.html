@@ -1,0 +1,52 @@
+<!------------------------
+
+Authors: Matthew Reilly
+16/04/19
+What it does:
+main html that is ran for the force diagram
+all javascript, css and data file are link to here.
+
+----------------------->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Force Clustering</title>
+	<link rel="stylesheet" type="text/css" href="force.css"/>
+	<script type="text/javascript" src="d3/d3.v4.js"></script>
+	<script src="force.js"></script>
+</head>
+
+<body>
+
+		<div id="forceDiv"></div>
+
+
+
+<script type="text/javascript">
+"use strict"
+
+var f1;
+
+//=============== READ DATA FILES ================================
+
+
+d3.queue()
+	.await(initialiseApp);
+
+//======================== MAIN FUNCTION =================================
+//Carries out all initialization and setup
+function initialiseApp(error){
+	//Check data files have loaded
+	if (error) {console . log (" there are errror with loading the data: ", error); return;}
+
+
+		f1 = force("#forceDiv")
+
+		f1.loadAndRenderDataset()
+
+	}
+
+</script>
+</body>
+</html>

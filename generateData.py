@@ -12,7 +12,7 @@ import json
 ##22 good
 random.seed(50)
 radius = []
-mat = np.array(pd.read_csv("SimMatrix25-1.csv",header = None))
+mat = np.array(pd.read_csv("SimMatrix50-1.csv",header = None))
 
 for x in range(len(mat[0])):
     for y in range(len(mat[0])):

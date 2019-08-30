@@ -1,0 +1,50 @@
+<!------------------------
+
+Authors: Matthew Reilly
+16/04/19
+What it does:
+main html that is ran for the agglomerative clustering concept map
+all javascript, css and data file are link to here.
+
+----------------------->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Agglomerative Clustering</title>
+	<link rel="stylesheet" type="text/css" href="agglomerative.css"/>
+	<script type="text/javascript" src="d3/d3.v4.js"></script>
+	<script src="agglomerative.js"></script>
+</head>
+
+<body>
+
+
+
+		<div id="agglomerativeDiv"></div>
+
+
+<script type="text/javascript">
+"use strict"
+
+
+var a1;
+
+
+d3.queue()
+	.await(initialiseApp);
+
+//======================== MAIN FUNCTION =================================
+//Carries out all initialization and setup
+function initialiseApp(error){
+	//Check data files have loaded
+	if (error) {console . log (" there are errror with loading the data: ", error); return;}
+
+		a1 = agglomerative("#agglomerativeDiv")
+		a1.loadAndRenderDataset()
+
+	}
+
+</script>
+</body>
+</html>
