@@ -5,4 +5,4 @@
 
 2. Then run Agglomerative.py this will create the agglomerative layout.
 
-3 .Finally Open each of the folders (force, pack, agglomerative) and open the html file in firefox.
+3. Finally Open each of the folders (force, pack, agglomerative) and open the html file in firefox.
